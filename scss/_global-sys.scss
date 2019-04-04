@@ -1,0 +1,514 @@
+//show / hide retina
+.show-1x {
+    display:block;
+}
+.show-2x {
+    display:none;
+}
+@media 
+(-webkit-min-device-pixel-ratio: 1.5), 
+(min-resolution: 192dpi) { 
+    .show-1x {
+        display:none;
+    }
+    .show-2x {
+        display:block;
+    }
+}
+//show / hide 1440 down
+.show-1440 {
+    display:none !important;
+}
+.hide-1440 {
+    display:block !important;
+}
+@media only screen
+and (max-width:1440px) {
+    .show-1440 {
+        display:block !important;
+    }
+    .hide-1440 {
+        display:none !important;
+    }
+}
+//show / hide mobile
+.show-767 {
+    display:none !important;
+}
+.hide-767 {
+    display:block !important;
+}
+.show-767-inline {
+    display:none !important;
+}
+.hide-767-inline {
+    display:inline-block !important;
+}
+
+@media only screen
+and (max-width:767px) {
+    .show-767 {
+        display:block !important;
+    }
+    .hide-767 {
+        display:none !important;
+    }
+    .show-767-inline {
+        display:inline-block !important;
+    }
+    .hide-767-inline {
+        display:none !important;
+    }
+}
+//show / hide tablet portrait
+.show-768-1023 {
+    display:none !important;
+}
+.hide-768-1023 {
+    display:block !important;
+}
+@media only screen
+and (min-width:768px)
+and (max-width:1023px) {
+    .show-768-1023 {
+        display:block !important;
+    }
+    .hide-768-1023 {
+        display:none !important;
+    }    
+}
+//show / hide tablet landscape
+.show-1024 {
+    display:none !important;
+}
+@media only screen
+and (min-width:768px)
+and (max-width:1024px) {
+    .show-1024 {
+        display:block !important;
+    }
+}
+//master
+.site-content {
+	padding:90px 0 0 0;
+    @media only screen
+    and (max-width:767px) {
+        padding:58px 0 0 0;
+    }
+}
+.master {
+    .inner {
+        max-width:1440px;
+        width:100%;
+        margin:0 auto;
+        padding:0 15px;
+    }
+}
+//bullets
+ul.bullets {
+    margin:0;
+    li.blt {
+        padding:0 0 0 45px;
+        position:relative;
+        display:block;
+        &:after {
+            color:#9a9a9a;
+            content:"•";
+            position:absolute;
+            top:0px;
+            left:20px;
+        }
+    }
+}
+//errors / validation
+.display-error, .display-success {
+    width:100%;
+    height:45px;
+    background-color:scale-color(red, $lightness:-12%);
+    color:$white;
+    line-height:45px;
+    text-align: center;
+    margin-bottom:8px;
+    font-family: $mont;
+    font-weight:400;
+    font-size:14px;
+    clear:both;
+    border-radius:4px;
+    display:none;
+    margin-top:15px !important;
+}
+.display-success {
+    background-color:#2f883c;
+}
+.is-invalid-input {
+    border:2px solid #e22e2e !important;
+    background-color:rgba(226,46,46,0.05) !important;    
+    //color:#e22e2e !important;
+}
+span.form-error {
+    color:#e22e2e !important;
+}
+//placeholders
+.is-invalid-input input::-webkit-input-placeholder {
+    color: #e22e2e !important;
+}
+.is-invalid-input input:-moz-placeholder {
+    color: #e22e2e !important;
+    opacity:  1;
+}
+.is-invalid-input input::-moz-placeholder {
+    color: #e22e2e !important;
+    opacity:  1;
+}
+.is-invalid-input input:-ms-input-placeholder {
+    color: #e22e2e !important;
+}
+.is-invalid-input textarea::-webkit-input-placeholder {
+    color: #e22e2e !important;
+}
+.is-invalid-input textarea:-moz-placeholder {
+    color: #e22e2e !important;
+    opacity:  1;
+}
+.is-invalid-input textarea::-moz-placeholder {
+    color: #e22e2e !important;
+    opacity:  1;
+}
+.is-invalid-input textarea:-ms-input-placeholder {
+    color: #e22e2e !important;
+}
+//placeholders
+input::-webkit-input-placeholder {
+    color:    #a9a9a9;
+}
+input:-moz-placeholder {
+   color:    #a9a9a9;
+   opacity:  1;
+}
+input::-moz-placeholder {
+   color:    #a9a9a9;
+   opacity:  1;
+}
+input:-ms-input-placeholder {
+   color:    #a9a9a9;
+}
+textarea::-webkit-input-placeholder {
+color:    #a9a9a9;
+}
+textarea:-moz-placeholder {
+   color:    #a9a9a9;
+   opacity:  1;
+}
+textarea::-moz-placeholder {
+   color:    #a9a9a9;
+   opacity:  1;
+}
+textarea:-ms-input-placeholder {
+   color:    #a9a9a9;
+}
+//styling tricks
+.vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);   
+}
+.text-char-count {
+    position:absolute;
+    right:10px;
+    bottom:7px;
+    font-family: proxima_nova_rgregular;
+    font-size:12px;
+    color:#2e2e2e;
+    opacity:0.5;
+
+}
+.trans1 {
+	-webkit-transition: all 0.01s linear;
+    -moz-transition: all 0.01s linear;
+    -o-transition: all 0.01s linear;
+    -ms-transition: all 0.01s linear;
+    transition: all 0.01s linear;
+}
+.trans2 {
+	-webkit-transition: all 0.05s linear;
+    -moz-transition: all 0.05s linear;
+    -o-transition: all 0.05s linear;
+    -ms-transition: all 0.05s linear;
+    transition: all 0.05s linear;
+}
+.trans3 {
+	-webkit-transition: all 0.09s linear;
+    -moz-transition: all 0.09s linear;
+    -o-transition: all 0.09s linear;
+    -ms-transition: all 0.09s linear;
+    transition: all 0.09s linear;
+}
+.trans4 {
+    -webkit-transition: all 0.66s linear;
+    -moz-transition: all 0.66s linear;
+    -o-transition: all 0.66s linear;
+    -ms-transition: all 0.66s linear;
+    transition: all 0.66s linear;
+}
+
+.trans6 {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.under-hover {
+    display:inline-block;
+    letter-spacing:0px;
+}
+.under-hover:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+    margin-top:-31px;
+}
+.under-hover:hover:after {
+    width: 100%;
+    background: $blueDark;
+    transition: 0.5s ease;  
+    margin-top:-31px;
+}
+.clear {
+	clear:both !important;
+}
+//standard elements
+h1, h2, h3, h4, h5, h6, ul, li, p, label, div, span {
+	margin:0;
+	padding:0;
+}
+ul {
+	list-style-type:none !important;
+    margin:0;
+    padding:0;
+}
+//placeholders
+input::-webkit-input-placeholder { 
+    color:    #6b6c6c;
+}
+input:-moz-placeholder { 
+   color:    #6b6c6c;
+   opacity:  1;
+}
+input::-moz-placeholder {
+   color:    #6b6c6c;
+   opacity:  1;
+}
+input:-ms-input-placeholder { 
+   color:    #6b6c6c;
+}
+textarea::-webkit-input-placeholder { 
+color:    #6b6c6c;
+}
+textarea:-moz-placeholder { 
+   color:    #6b6c6c;
+   opacity:  1;
+}
+textarea::-moz-placeholder {
+   color:    #6b6c6c;
+   opacity:  1;
+}
+textarea:-ms-input-placeholder { 
+   color:    #6b6c6c;
+}
+select {
+    background-color:white;
+}
+//slick
+.slick-prev {
+    margin:0 0 0 -10px !important;
+    background-image:url('../img/nav-left.png') !important;
+    background-size:100%;   
+    height:50px !important;
+    width:40px !important; 
+    transition: all 0.05s linear;
+    border:none !important;
+    //background-color:#eee !important;
+    &:hover {        
+        background-image:url('../img/nav-left.png') !important;
+        background-size:100%;  
+        opacity:1.0 !important;    
+    }
+}
+.slick-next {
+    margin:0 -10px 0 0 !important;
+    background-image:url('../img/nav-right.png') !important;
+    background-size:100%;
+    height:50px !important;
+    width:40px !important; 
+    transition: all 0.05s linear;    
+    border:none !important;
+    //background-color:#eee !important;
+    &:hover {        
+        background-image:url('../img/nav-right.png') !important;
+        background-size:100%;    
+        opacity:1.0 !important;
+    }
+}
+.slick-prev, .slick-next {
+    top:50% !important;
+    margin-top:-25px !important;
+    z-index:10 !important;
+}
+.slick-dots {
+    //this was no fun
+    padding:0 21px !important;
+    position:absolute;
+    width:100% !important;
+    max-width:1338px !important;
+    bottom:29px !important;
+    z-index:10 !important;
+    display:block;
+    left:0;
+    right:0;
+    margin:0 auto;
+    li {
+        position: relative !important;
+        display: block !important;
+        float:left !important;
+        width:25% !important;   
+        margin:0 !important;   
+        height:108px !important;
+        padding:0 !important;  
+        button {
+            //outline: 2px dotted turquoise !important;
+            border:none !important;
+            background: transparent;
+            display: block;      
+            outline: none;
+            cursor:pointer;
+            height:60px !important;
+            width:100% !important;
+            z-index:10 !important;
+            position:absolute !important;
+            top:0 !important;
+            left:0 !important;
+            &:before { //text
+                font-family: $mont !important;
+                font-size:14px !important;
+                font-weight:600 !important;
+                color:#ffffff !important;
+                width:100% !important;
+                border-radius:none !important;
+                border:none !important;
+                background-color:transparent !important;
+                display:block !important;
+                position:absolute;
+                z-index:9 !important;
+                padding:0 !important;
+                text-align:left !important;
+                //outline:2px dashed red;
+                height:40px !important;
+                top:0 !important;
+                left:0 !important;
+                opacity:1.0 !important;            
+            }
+            &:after { //underline
+                content:"" !important;
+                display:block !important;
+                height:2px !important;
+                width:66% !important;
+                left:0 !important;
+                bottom:22px !important;
+                background-color:rgba(255,255,255,0.1) !important;
+                position:absolute !important;
+            }
+        }
+    }
+    //text for each nav button
+    li:nth-child(1) button:before {
+        content:"About Darwin Tech";
+    }
+    li:nth-child(2) button:before {
+        content:"Rapid Prototyping";
+    }
+    li:nth-child(3) button:before {
+        content:"Wireless Experts";
+    }
+    li:nth-child(4) button:before {
+        content:"Consumer Robotics";
+    }
+
+    li.slick-active button:before {
+        background-color:transparent;
+        opacity:1 !important;
+    }
+    //active blue underline
+    li.slick-active:after {
+        opacity:1.0 !important;
+        content:"" !important;
+        position:absolute !important;
+        display:block !important;
+        width:101px !important;
+        height:2px !important;
+        background-image: linear-gradient(to right, #00a0ff, #07c4fe);
+        top:36px !important;
+        left:0 !important;
+        z-index:100 !important;
+    }
+    @media only screen
+    and (max-width:767px) {
+        //this was no fun
+        bottom:-10px !important;
+        li {
+            button {
+                &:before { //text
+                    font-size:12.5px !important;//
+                    width:100% !important;//     
+                }
+                &:after { //underline
+                    width:64px !important;//
+                    bottom:10px !important;//
+                }
+            }
+        }
+        //widths
+        li:nth-child(1) {
+            width:24.5% !important;//
+        }
+        li:nth-child(2) {
+            width:29.5% !important;//
+        }
+        li:nth-child(3) {
+            width:23.5% !important;//
+        }
+        li:nth-child(4) {
+            width:22.5% !important;//
+        }
+        //text for each nav button
+        li:nth-child(1) button:before {
+            content:"About\A Darwin";//
+            white-space: pre;
+        }
+        li:nth-child(2) button:before {
+            content:"Rapid\A Prototyping";//
+            white-space: pre;
+        }
+        li:nth-child(3) button:before {
+            content:"Wireless\A Experts";//
+            white-space: pre;
+        }
+        li:nth-child(4) button:before {
+            content:"Consumer\A Robotics";//
+            white-space: pre;
+        }
+
+        li.slick-active button:before {
+            background-color:transparent;
+            opacity:1 !important;
+        }
+        //active blue underline
+        li.slick-active:after {
+            width:21px !important;//
+            top:48px !important;//
+        }  
+    }
+}
